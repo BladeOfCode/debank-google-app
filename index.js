@@ -152,7 +152,7 @@ function fetchData(url, maxTries) {
 }
 
 function pullDataWithZapper(walletAddress, networkNames) {
-  const apiKEY = "9b62ab8a-35c2-4ec8-b12a-9dfc93975f6d";  // API key from Zapper
+  const apiKEY = "";  // API key from Zapper
 
   //we should use multiple networkNames for fetching.
   const url = makeURL(apiKEY, walletAddress, networkNames);
@@ -273,7 +273,7 @@ function getSingleWalletNftBalance(address) {
   address = "0x05b3b97c67ffcf6b441ab8b08896329674acf46b";
   if (!address) return 'reload';
   
-  const apiKEY = "9b62ab8a-35c2-4ec8-b12a-9dfc93975f6d";  // API key from Zapper
+  const apiKEY = "";  // API key from Zapper
   const url = `https://api.zapper.fi/v2/nft/balances/net-worth?addresses%5B%5D=${address}&api_key=${apiKEY}`;
 
   try {
@@ -318,7 +318,7 @@ const tokenD2T = "0x081071ddB7D5aF61Eb545C362ee78CC46c4bAd8f";
 const tokenIMPT = "0x73Da6c5f616EB9d8A3B3a4bb920365eDEf8AF4E4";
 
 function getAllTokenList(wallet) {
-  const apiKey = "72f21c6d6d7e1d6a130e5cd201daa62349284f86";
+  const apiKey = "";
   const url_balance = `https://pro-openapi.debank.com/v1/user/all_token_list?id=${wallet}`;
   const params = {
     'muteHttpExceptions': true,
@@ -383,7 +383,7 @@ function getTamaAmount(address, checked) {
 
 function getHistoryList(walletAddress, startTime, endTime) {
   
-  const apiKey = "72f21c6d6d7e1d6a130e5cd201daa62349284f86";
+  const apiKey = "";
 
   let historyArray = [];
 
@@ -417,7 +417,7 @@ function getHistoryList(walletAddress, startTime, endTime) {
 }
 
 function getBlockNumber(txnHash) {
-  const apiKeyEtherScan = "WYIR324M6JDCAGH79VJH6H966Y1KQRN73Q";
+  const apiKeyEtherScan = "";
   const url = `https://api.etherscan.io/api?module=proxy&action=eth_getTransactionByHash&txhash=${txnHash}&apiKey=${apiKeyEtherScan}`;
   try {
     const result = JSON.parse(UrlFetchApp.fetch(url).getContentText());
@@ -436,7 +436,7 @@ function getTokenNumber(blockNumber, tokenName) {
     topic0 = "0x4d8aead3491b7eba4b5c7a65fc17e493b9e63f9e433522fc5f6a85a168fc9d36";
   }
   
-  const apiKeyEtherScan = "WYIR324M6JDCAGH79VJH6H966Y1KQRN73Q";
+  const apiKeyEtherScan = "";
   const url = `https://api.etherscan.io/api?module=logs&action=getLogs&fromBlock=${blockNumber}&toBlock=${blockNumber}&topic0=${topic0}&page=1&offset=1000&apikey=${apiKeyEtherScan}`;
   try {
     const result = JSON.parse(UrlFetchApp.fetch(url).getContentText());
@@ -659,7 +659,7 @@ function calculateWholeImpt() {
 }
 
 function getTotalBalanceWithDebank(walletAddress) {
-  const apiKey = "72f21c6d6d7e1d6a130e5cd201daa62349284f86";
+  const apiKey = "";
   const url_balance = `https://pro-openapi.debank.com/v1/user/total_balance?id=${walletAddress}`;
   const params = {
     'muteHttpExceptions': true,
